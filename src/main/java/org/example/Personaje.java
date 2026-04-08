@@ -10,7 +10,7 @@ public class Personaje {
     private double nivel;
     private double daño;
 
-    public Personaje(String nombre, double vida, double proteccion, double agilidad, double dinero, double exp, double nivel, double daño) {
+    public Personaje() {
         this.nombre = nombre;
         this.vida = vida;
         this.proteccion = proteccion;
@@ -85,6 +85,28 @@ public class Personaje {
         this.daño = daño;
     }
 
+    public void mostrarEstadisticas(){
+        String nombre = getNombre();
+        double vida =  getVida();
+        double proteccion = getProteccion();
+        double agilidad = getAgilidad();
+        double dinero = getDinero();
+        double exp = getExp();
+        double nivel = getNivel();
+        double daño = getDaño();
+
+        String estadisticas = "Personaje{" +
+                "nombre='" + nombre + '\'' +
+                ", vida=" + vida +
+                ", proteccion=" + proteccion +
+                ", agilidad=" + agilidad +
+                ", dinero=" + dinero +
+                ", exp=" + exp +
+                ", nivel=" + nivel +
+                ", daño=" + daño +
+                '}';
+        System.out.println(estadisticas);
+    }
     @Override
     public String toString() {
         return "Personaje{" +
