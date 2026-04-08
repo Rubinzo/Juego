@@ -10,7 +10,7 @@ public class Personaje implements Serializable {
     private double agilidad;
     private double dinero;
     private double exp;
-    private double nivel;
+    private int nivel;
     private double daño;
 
     public Personaje() {
@@ -72,11 +72,11 @@ public class Personaje implements Serializable {
         this.exp = exp;
     }
 
-    public double getNivel() {
+    public int getNivel() {
         return nivel;
     }
 
-    public void setNivel(double nivel) {
+    public void setNivel(int nivel) {
         this.nivel = nivel;
     }
 
@@ -95,7 +95,7 @@ public class Personaje implements Serializable {
         double agilidad = getAgilidad();
         double dinero = getDinero();
         double exp = getExp();
-        double nivel = getNivel();
+        int nivel = getNivel();
         double daño = getDaño();
 
         String estadisticas = "Personaje{" +

@@ -8,7 +8,7 @@ public class Menus {
     private static final Personaje personaje = new Personaje();
 
     public void menuPersonaje(){
-        System.out.println("======Menu Personaje======"+ "\n1. Iniciar Personaje"  + "\n2. Estadísticas" + "\n===============");
+        System.out.println("======Menu Personaje======"+ "\n1. Iniciar Personaje"  + "\n2. Estadísticas" + "\n3. Avanzar" + "\n===============");
         int menu = sc.pedirNumero();
 
         switch(menu){
@@ -22,6 +22,8 @@ public class Menus {
                 personaje.mostrarEstadisticas();
                 break;
             case 3:
+                Enemigos.siguienteNivel();
+
 
 
 
