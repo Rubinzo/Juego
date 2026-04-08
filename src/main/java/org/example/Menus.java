@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.*;
 import java.util.Scanner;
 
 public class Menus {
@@ -12,6 +13,7 @@ public class Menus {
 
         switch(menu){
             case 1:
+                personaje.guardarEstadisticas();
                 personaje.mostrarEstadisticas();
                 personaje.iniciarPersonaje("asd");
                 personaje.mostrarEstadisticas();
@@ -19,7 +21,13 @@ public class Menus {
             case 2:
                 personaje.mostrarEstadisticas();
                 break;
+            case 3:
+
+
+
         }
     }
+
+
 
 }

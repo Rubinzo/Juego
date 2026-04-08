@@ -1,6 +1,9 @@
 package org.example;
 
-public class Personaje {
+import java.io.Serializable;
+
+public class Personaje implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String nombre;
     private double vida;
     private double proteccion;
@@ -119,17 +122,25 @@ public class Personaje {
         setNivel(0);
     }
 
+    public void guardarEstadisticas(){
+
+        String[] atributos = toString().split(" ");
+        for(String atributo : atributos){
+            System.out.println(atributo);
+        }
+    }
+
     @Override
     public String toString() {
         return "Personaje{" +
-                "nombre = " + nombre + '\'' +
-                ", vida = " + vida +
-                ", proteccion = " + proteccion +
-                ", agilidad = " + agilidad +
-                ", dinero = " + dinero +
-                ", exp = " + exp +
-                ", nivel = " + nivel +
-                ", daño = " + daño +
+                "nombre= " + nombre + '\'' +
+                ", vida= " + vida +
+                ", proteccion= " + proteccion +
+                ", agilidad= " + agilidad +
+                ", dinero= " + dinero +
+                ", exp= " + exp +
+                ", nivel= " + nivel +
+                ", daño= " + daño +
                 '}';
     }
 }
