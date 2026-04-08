@@ -107,17 +107,29 @@ public class Personaje {
                 '}';
         System.out.println(estadisticas);
     }
+
+    public void iniciarPersonaje(String nombre){
+        setNombre(nombre);
+        setVida(10);
+        setDaño(1);
+        setProteccion(0);
+        setAgilidad(1);
+        setDinero(0);
+        setExp(0);
+        setNivel(0);
+    }
+
     @Override
     public String toString() {
         return "Personaje{" +
-                "nombre='" + nombre + '\'' +
-                ", vida=" + vida +
-                ", proteccion=" + proteccion +
-                ", agilidad=" + agilidad +
-                ", dinero=" + dinero +
-                ", exp=" + exp +
-                ", nivel=" + nivel +
-                ", daño=" + daño +
+                "nombre = " + nombre + '\'' +
+                ", vida = " + vida +
+                ", proteccion = " + proteccion +
+                ", agilidad = " + agilidad +
+                ", dinero = " + dinero +
+                ", exp = " + exp +
+                ", nivel = " + nivel +
+                ", daño = " + daño +
                 '}';
     }
 }
