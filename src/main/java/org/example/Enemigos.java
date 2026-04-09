@@ -70,8 +70,8 @@ public class Enemigos {
     public static ArrayList<Enemigos> crearEnemigos(){
         ArrayList<Enemigos> listaEnemigos = new ArrayList<>();
         listaEnemigos.add(new Enemigos("Esclavo", 5, 0, 1, 1));
-        listaEnemigos.add(new Enemigos("Esbirro", 5, 4, 1, 1));
-        listaEnemigos.add(new Enemigos("Esbirro", 5, 4, 1, 1));
+        listaEnemigos.add(new Enemigos("Eloy", 5, 4, 1, 1));
+        listaEnemigos.add(new Enemigos("Juanfran", 5, 4, 1, 1));
         listaEnemigos.add(new Enemigos("Esbirro", 5, 4, 1, 1));
         listaEnemigos.add(new Enemigos("Esbirro", 5, 4, 1, 1));
         return listaEnemigos;
