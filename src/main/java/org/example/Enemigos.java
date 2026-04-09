@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Enemigos {
     private String nombre;
@@ -8,6 +9,7 @@ public class Enemigos {
     private double proteccion;
     private double agilidad;
     private double daño;
+    private static final ArrayList<Enemigos> listaEnemigos = Enemigos.crearEnemigos();
 
     public Enemigos(String nombre, double vida, double proteccion, double agilidad, double daño){
         this.nombre = nombre;
@@ -57,28 +59,22 @@ public class Enemigos {
         this.nombre = nombre;
     }
 
-    public static Enemigos[] crearEnemigos(){
-        int n = 10;
-        Enemigos En0 = new Enemigos("Esclavo", 5, 0, 1, 1);
-        Enemigos En1 = new Enemigos("Esbirro", 5, 4, 1, 1);
-        Enemigos En2 = new Enemigos("Esbirro", 5, 4, 1, 1);
-        Enemigos En3 = new Enemigos("Esbirro", 5, 4, 1, 1);
-        Enemigos En4 = new Enemigos("Esbirro", 5, 4, 1, 1);
-        Enemigos En5 = new Enemigos("Esbirro", 5, 4, 1, 1);
-        Enemigos[] listaEnemigos = new Enemigos[n];
-        listaEnemigos[0] = En0;
-        listaEnemigos[1] = En1;
-        listaEnemigos[2] = En2;
-        listaEnemigos[3] = En3;
-        listaEnemigos[4] = En4;
-        listaEnemigos[5] = En5;
-        return listaEnemigos;
+    public ArrayList<Enemigos> getListaEnemigos(){
+        return this.listaEnemigos;
     }
 
-    //solo estoy utilizando siguienteNivel() para hacer pruebas por ahora
-    public static void siguienteNivel(){
-        Enemigos[] enemigosCreados = crearEnemigos();
-        System.out.println(Arrays.toString(enemigosCreados));
+    public static Enemigos getEnemigo(int nivel){
+        return listaEnemigos.get(nivel);
+    }
+
+    public static ArrayList<Enemigos> crearEnemigos(){
+        ArrayList<Enemigos> listaEnemigos = new ArrayList<>();
+        listaEnemigos.add(new Enemigos("Esclavo", 5, 0, 1, 1));
+        listaEnemigos.add(new Enemigos("Esbirro", 5, 4, 1, 1));
+        listaEnemigos.add(new Enemigos("Esbirro", 5, 4, 1, 1));
+        listaEnemigos.add(new Enemigos("Esbirro", 5, 4, 1, 1));
+        listaEnemigos.add(new Enemigos("Esbirro", 5, 4, 1, 1));
+        return listaEnemigos;
     }
 
     @Override

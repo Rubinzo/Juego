@@ -10,8 +10,8 @@ public class Personaje implements Serializable {
     private double agilidad;
     private double dinero;
     private double exp;
-    private int nivel;
     private double daño;
+    private static int nivel = 0;
 
     public Personaje() {
         this.nombre = nombre;
@@ -72,20 +72,20 @@ public class Personaje implements Serializable {
         this.exp = exp;
     }
 
-    public int getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
-    }
-
     public double getDaño() {
         return daño;
     }
 
     public void setDaño(double daño) {
         this.daño = daño;
+    }
+
+    public static int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
     }
 
     public void mostrarEstadisticas(){
@@ -123,11 +123,16 @@ public class Personaje implements Serializable {
     }
 
     public void guardarEstadisticas(){
-
         String[] atributos = toString().split(" ");
         for(String atributo : atributos){
             System.out.println(atributo);
         }
+    }
+
+    public static void siguienteNivel(){
+        Enemigos siguienteEnemigo = Enemigos.getEnemigo(getNivel());
+        nivel++;
+        System.out.println(siguienteEnemigo.toString());
     }
 
     @Override
